@@ -23,7 +23,7 @@ public class StudentManagement {
         int dem = students.length;
         int i;
         for (i = 0; i < dem; i++) {
-            if (students[i].getId() == id) {
+            if (students[i].getId().equals(id)) {
                 break;
             }
         }
@@ -78,7 +78,7 @@ public class StudentManagement {
 
             System.out.println("Xóa sinh viên có mã sinh viên là ID" + "\n");
 
-            st.remove("17020869");
+            st.remove("113");
 
         }
 }
