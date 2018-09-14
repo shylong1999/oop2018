@@ -62,7 +62,7 @@ public class StudentManagement {
             for (int i = 0; i < st.students.length; i++) {
                 st.students[i] = new Student();
                 st.students[i].setName("UNG LONG");
-                st.students[i].setId("113");
+                st.students[i].setId("1702xxxx");
                 st.students[i].setGroup("INT22044");
                 st.students[i].setEmail("unglong5@gmail.com");
             }
