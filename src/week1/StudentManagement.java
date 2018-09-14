@@ -5,7 +5,7 @@ public class StudentManagement {
 
     Student[] students = new Student[100];
 
-    public static boolean sameGroup(Student s1, Student s2) {
+    public  boolean sameGroup(Student s1, Student s2) {
         return (s1.getGroup().equals(s2.getGroup()));
     }
 
@@ -44,7 +44,7 @@ public class StudentManagement {
         System.out.println(sv1.getName());
         System.out.println(sv1.getInfo());
 
-
+        StudentManagement st = new StudentManagement();
         Student sv2 = new Student("ABC", "17020864", "17020864@vnu.edu.vn");
         Student sv3 = new Student(sv1);
 
@@ -53,11 +53,10 @@ public class StudentManagement {
 
         //Kiểm tra 2 sinh viên có cùng lớp hay không?
         System.out.println("Kiểm tra 2 sinh viên có cùng lớp hay không? " + "\n");
-        if (sameGroup(sv1, sv2)) System.out.println("2 sinh viên cùng lớp" + "\n");
+        if (st.sameGroup(sv1, sv2)) System.out.println("2 sinh viên cùng lớp" + "\n");
         else System.out.println("2 sinh viên không cùng lớp" + "\n");
 
 
-        StudentManagement st = new StudentManagement();
 
             //Nhập thông tin sinh viên
             for (int i = 0; i < st.students.length; i++) {
