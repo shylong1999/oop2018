@@ -47,7 +47,7 @@ public class Student {
     Student(String n, String sid, String em) {
         this.name = n;
         this.id = sid;
-        this.group = "K59CB";
+        this.group = "INT22041";
         this.email = em;
 
     }
