@@ -61,7 +61,7 @@ public class Student {
     }
 
     String getInfo() {
-        String TTSV = name + "\n" + id + "\n" + group + "\n" + email + "\n";
+        String TTSV ="Name: "+ name + "\nID: " + id + "\nGroup: " + group + "\nEmail: " + email + "\n";
         return TTSV;
     }
 }
