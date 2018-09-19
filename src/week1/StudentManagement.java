@@ -31,7 +31,8 @@ public class StudentManagement {
                 j++;
             }
             if (j==length){
-                nameGroup[length++] = students[i].getGroup();
+                nameGroup[length] = students[i].getGroup();
+                length++;
             }
         }
         for (int i=0;i<length;i++) {
@@ -59,6 +60,18 @@ public class StudentManagement {
         }
         count--;
     }
+        /*int i;
+        for (i = 0; i < count; i++) {
+            if (i == count) {
+                System.out.println("Không có sinh viên nào có trùng mã id "+ id);
+            }
+            else if (students[i].getId().equals(id)) {
+                for (int j = i; j < count-1 ; j++) {
+                    students[j] = students[j + 1];
+                }
+                count--;
+            }
+        }*/
 
     public static void main(String[] args) {
         StudentManagement st = new StudentManagement();
@@ -111,8 +124,11 @@ public class StudentManagement {
         System.out.println("In ra danh sách sinh viên cùng lớp");
         st.studentsByGroup();
 
-        System.out.println("Danh sách sau khi xóa sinh viên có mã sinh viên ID là 17051999 ");
         st.remove("17051999");
+        st.remove("17020869");
+        st.remove("17021105");
+        st.remove("17020899");
+        System.out.println("Danh sách sau khi xóa sinh viên có mã sinh viên ID là 17051999 ");
         st.printNameStudent();
 
         }
