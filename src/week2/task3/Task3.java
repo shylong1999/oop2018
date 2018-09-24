@@ -127,3 +127,64 @@ class Cat{
     }
 }
 
+class Rectangular{
+    private int length, width, height;
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    //Hình hộp chữ nhật
+    public Rectangular(int length, int width, int height){
+        this.length = length;
+        this.width = width;
+        this.height = height;
+    }
+
+    //diện tích toàn phần
+    public int TotalArea(){
+        int Stp;
+        Stp = 2*(length*width + length*height + width*height);
+        return Stp;
+    }
+    //diện tích xung quanh
+    public int AroundArea(){
+        int Sxq;
+        Sxq = 2*(height*length + height*width);
+        return Sxq;
+    }
+    //Thể tích
+    public int Volume(){
+        int V = height*length*width;
+        return V;
+    }
+
+    //So sánh thể tích
+    public int volumeComparison(Rectangular r1, Rectangular r2){
+        int V1 = r1.length*r1.width*r1.height;
+        int V2 = r2.length*r2.width*r2.height;
+        if (V1 > V2) return 1;
+        else if (V1 == V2) return 0;
+        return -1;
+    }
+}
