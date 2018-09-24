@@ -3,6 +3,7 @@ package week3;
 public class Week3 {
 
     public static int max(int m, int n) {
+        if (m == n) return 0;
         return Math.max(m,n);
     }
 
@@ -29,14 +30,12 @@ public class Week3 {
         return "Béo phì";
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         System.out.println(max(5,10));
 
         int a[] = {1, 2, 3, 4, 99 , -1 , -6, -10};
         System.out.println(minOfArray(a));
 
         System.out.println(calculateBMI(67,1.70));
-    }
-
-
+    } */
 }
