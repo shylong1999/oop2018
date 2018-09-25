@@ -14,38 +14,39 @@ package week2.task2;
             this.denominator = denominator;
         }
 
-    /*public void setFraction(Fraction fraction) {
+        /*public void setFraction(Fraction fraction) {
         this.numerator = fraction.numerator;
         this.denominator = fraction.denominator;
-    }*/
+        }*/
 
         public void PrintFraction(){
             if (numerator > 0 && denominator < 0) System.out.println((-this.numerator) + "/" + (-this.denominator));
             else if (numerator < 0 && denominator < 0) System.out.println((-this.numerator) + "/" + (-this.denominator));
             else System.out.println(this.numerator + "/" + this.denominator);
         }
+
         public Fraction add(Fraction other) {
-            other.numerator = this.numerator*other.denominator + this.denominator*other.numerator;
-            other.denominator = this.denominator*other.denominator;
-            return other;
+            int numerator = this.numerator*other.denominator + this.denominator*other.numerator;
+            int denominator = this.denominator*other.denominator;
+            return new Fraction(numerator,denominator);
         }
 
         public Fraction subtract(Fraction other) {
-            other.numerator = this.numerator*other.denominator - this.denominator*other.numerator;
-            other.denominator = this.denominator*other.denominator;
-            return other;
+            int numerator = this.numerator*other.denominator - this.denominator*other.numerator;
+            int denominator = this.denominator*other.denominator;
+            return new Fraction(numerator,denominator);
         }
 
         public Fraction multiply(Fraction other) {
-            other.numerator = this.numerator*other.numerator;
-            other.denominator = this.denominator*other.denominator;
-            return other;
+            int numerator = this.numerator*other.numerator;
+            int denominator = this.denominator*other.denominator;
+            return new Fraction(numerator,denominator);
         }
 
         public Fraction divide(Fraction other) {
-            other.numerator = this.numerator*other.denominator;
-            other.denominator = this.denominator*other.numerator;
-            return other;
+            int numerator = this.numerator*other.denominator;
+            int denominator = this.denominator*other.numerator;
+            return new Fraction(numerator,denominator);
         }
 
 
@@ -67,10 +68,7 @@ package week2.task2;
     public static void main(String[] args) {
         Fraction ps = new Fraction(3,5);
         Fraction ps1 = new Fraction(10,15);
-        Fraction ps2 = new Fraction(10,15);
-        Fraction ps3 = new Fraction(10,15);
-        Fraction ps4 = new Fraction(10,15);
-        Fraction ps5 = new Fraction(9,15);
+        Fraction ps2 = new Fraction(9,15);
         ps.PrintFraction();
 
         System.out.println("Rút gọn phân số 10/15");
@@ -83,17 +81,17 @@ package week2.task2;
         cong.PrintFraction();
 
         System.out.println("Phép trừ của 3/5 với 10/15");
-        Fraction tru = ps.subtract(ps2);
+        Fraction tru = ps.subtract(ps1);
         tru.Reduce();
         tru.PrintFraction();
 
         System.out.println("Phép nhan của 3/5 với 10/15");
-        Fraction nhan = ps.multiply(ps3);
+        Fraction nhan = ps.multiply(ps1);
         nhan.Reduce();
         nhan.PrintFraction();
 
         System.out.println("Phép chia của 3/5 với 10/15");
-        Fraction chia = ps.divide(ps4);
+        Fraction chia = ps.divide(ps1);
         chia.Reduce();
         chia.PrintFraction();
 
@@ -102,7 +100,7 @@ package week2.task2;
         else System.out.println("False");
 
         System.out.println("So sánh 2 phân số 3/5 và 9/15");
-        if (!ps.equals(ps5)) System.out.println("True");
+        if (!ps.equals(ps2)) System.out.println("True");
         else System.out.println("True");
 
     }
