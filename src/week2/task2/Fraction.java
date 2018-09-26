@@ -64,9 +64,6 @@ public class Fraction {
 
             int tu =  this.numerator*fraction.denominator - this.denominator*fraction.numerator;
             int mau =  this.denominator*fraction.denominator;
-
-            if (tu==0) System.out.println("Hai phan so bang nhau");
-
             if (tu * mau >=0) return true;
             return false;
         }
