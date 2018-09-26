@@ -87,7 +87,7 @@ public class Fraction {
             Fraction tru = ps.subtract(ps1);
             tru.Reduce();
             tru.PrintFraction();
-
+            
             System.out.println("Phép nhan của 3/5 với 10/15");
             Fraction nhan = ps.multiply(ps1);
             nhan.Reduce();
