@@ -11,4 +11,4 @@ import week2.task2.FractionTest;
         FractionTest.class
 })
 public class Week2Test {
-}
+        }

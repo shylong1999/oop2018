@@ -11,6 +11,9 @@ public class Week3Test {
     public void testMax() {
         assertEquals(7, Week3.max(7, 2));
         assertEquals(9, Week3.max(6, 9));
+        assertEquals(6, Week3.max(6, 6));
+        assertEquals(-1, Week3.max(-1, -10));
+        assertEquals(30, Week3.max(Week3.max(10, 20), Week3.max(15, 30)));
     }
 
     // TODO: Viết 5 testcase cho phương thức minOfArray()

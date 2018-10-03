@@ -3,7 +3,6 @@ package week3;
 public class Week3 {
 
     public static int max(int m, int n) {
-        if (m == n) return 0;
         return Math.max(m, n);
     }
 
