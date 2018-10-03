@@ -29,14 +29,4 @@ public class Week3 {
         else if (BMI >= 23 && BMI <= 24.99) return "Thừa cân";
         return "Béo phì";
     }
-
-
-    /*public static void main(String[] args) {
-        System.out.println(max(5,10));
-
-        int a[] = {1, 2, 3, 4, 99 , -1 , -6, -10};
-        System.out.println(minOfArray(a));
-
-        System.out.println(calculateBMI(67,1.70));
-    } */
 }
